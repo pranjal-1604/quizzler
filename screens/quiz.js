@@ -112,7 +112,7 @@ const Quiz = ({ navigation }) => {
                     <View style={styles.bottom}>
                         {currQues < 9 && <TouchableOpacity style={styles.button} onPress={() => { handleSkip() }}><Text style={styles.butttonText}>SKIP</Text></TouchableOpacity>}
                         {currQues === 9 && <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Result', { score })}><Text style={styles.butttonText}>SUBMIT</Text></TouchableOpacity>}
-                        <TouchableOpacity style={styles.button} onPress={() => { handleQuit() }}><Text style={styles.butttonText}>QUIT</Text></TouchableOpacity>
+                        <TouchableOpacity style={styles.button} onPress={() => { handleQuit() }}><Text style={styles.butttonText}>RESTART</Text></TouchableOpacity>
 
                     </View>
                 </View>
@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
 
     centeredView: {
         flex: 1,
-        backgroundColor: 'rgba(0,0,0,0.8)',
+        backgroundColor: 'rgba(0,0,0,0.9)',
         justifyContent: "center",
         alignItems: "center",
 
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
         padding: 10,
         elevation: 2,
         color: 'black',
-        backgroundColor: '#B2F9FC',
+        backgroundColor: '#687980',
     },
 
     textStyle: {

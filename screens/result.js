@@ -18,6 +18,7 @@ const Result = ({ route, navigation }) => {
                     value={val}
                     valueSuffix={'%'}
                     radius={120}
+                    activeStrokeColor={'#B2F9FC'}
                     inActiveStrokeOpacity={0.5}
                     activeStrokeWidth={20}
                     inActiveStrokeWidth={20}
@@ -26,7 +27,7 @@ const Result = ({ route, navigation }) => {
             </View>
             <View>
                 <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Home')}>
-                    <Text style={styles.butttonText}>RESTART</Text>
+                    <Text style={styles.butttonText}>HOME</Text>
                 </TouchableOpacity>
             </View>
         </View>
