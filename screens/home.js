@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
-import qImg from '../assets/question_mark.png';
+import qImg from '../assets/question_mark2.png';
 import Title from '../components/Title';
 
 
