@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { View, Text, TouchableOpacity, StyleSheet, Alert, Modal, Pressable } from 'react-native';
 
@@ -14,8 +15,7 @@ const Quiz = ({ navigation }) => {
     const [modalVisible, setModalVisible] = useState(false);
     const getQuiz = async () => {
         const url = 'https://opentdb.com/api.php?amount=10&type=multiple';
-        const res = await fetch(url);
-        const data = await res.json();
+        const { data } = await axios.get(url);
         setQuestions(data.results);
         // console.log(data.results);
     }
@@ -60,6 +60,7 @@ const Quiz = ({ navigation }) => {
     const handleQuit = () => {
         setcurrQues(0);
         setQuestions();
+        navigation.navigate('Home')
     };
 
     return (
